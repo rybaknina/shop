@@ -198,9 +198,7 @@
 }
 
 .product-text {
-    padding-left: 16px;
-    padding-right: 29px;
-    margin-bottom: 20px;
+    padding: 24px 29px 20px 17px;
 }
 
 .center {
@@ -342,6 +340,7 @@
     border-top-left-radius: 25px;
     border: 1px solid #E1E1E1;
     background-color: #E1E1E1;
+    width: 256px;
 }
 
 .subscribe-block {
@@ -395,4 +394,5 @@
     background-color: #FFFFFF;
     padding: 8px 8px;
     margin-left: 7px;
+    width: 32px;
 }
