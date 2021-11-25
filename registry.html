@@ -27,7 +27,7 @@
                         <img src="img/icon-menu.png" alt="menu">
                     </button>
                     <a href="registry.html" class="registry-link"><img src="img/icon-registry.png"
-                                                                                       alt="registry"></a>
+                                                                       alt="registry"></a>
                     <a href="cart.html" class="cart-link"><img src="img/icon-cart.png" alt="cart"></a>
                 </nav>
             </div>
@@ -40,9 +40,44 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="registry">
         <div class="container">
-            todo
+            <h2 class="hidden">Registration</h2>
+            <div class="registry-wrap">
+                <form action="#" class="registry-form">
+                    <fieldset class="registry-input">
+                        <h3 class="registry-description">Your Name</h3>
+                        <input type="text" class="registry-text" placeholder="First Name" required>
+                        <input type="text" class="registry-text" placeholder="Last Name" required>
+                    </fieldset>
+                    <fieldset class="registry-input registry-gender">
+                        <label class="gender-text"><input type="radio" name="gender" value="male" required checked>Male</label>
+                        <label class="gender-text"><input type="radio" name="gender" value="female"
+                                                          required>Female</label>
+                    </fieldset>
+                    <fieldset class="registry-input">
+                        <h3 class="registry-description">Login details</h3>
+                        <input type="text" class="registry-text" placeholder="Email" required>
+                        <input type="password" class="registry-text" placeholder="Password" required>
+                    </fieldset>
+                    <p class="hint">Please use 8 or more characters, with at least 1 number and a mixture of uppercase
+                                    and lowercase letters</p>
+                    <button type="submit" class="registry-btn">JOIN NOW<i class="fas fa-long-arrow-alt-right"></i>
+                    </button>
+                </form>
+                <div class="loyalty">
+                    <h3 class="loyalty-text">LOYALTY HAS ITS PERKS</h3>
+                    <p class="loyalty-description">Get in on the loyalty program where you can earn points and unlock serious perks. Starting with
+                                                   these as soon as you join:</p>
+                    <ul class="loyalty-list">
+                        <li class="loyalty-item">15% off welcome offer</li>
+                        <li class="loyalty-item">Free shipping, returns and exchanges on all orders</li>
+                        <li class="loyalty-item">$10 off a purchase on your birthday</li>
+                        <li class="loyalty-item">Early access to products</li>
+                        <li class="loyalty-item">Exclusive offers & rewards</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
     <section class="feedback">

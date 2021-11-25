@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -380,6 +381,7 @@
   line-height: 29px;
   color: #F16D7F; }
 
+/* breadcrumbs */
 .breadcrumbs-list {
   display: flex;
   list-style: none;
@@ -465,5 +467,93 @@
 
 .pagination-btn--current {
   color: #F16D7F; }
+
+/* registry */
+.registry {
+  padding-top: 64px;
+  padding-bottom: 96px; }
+
+.registry-wrap {
+  display: flex;
+  justify-content: space-between; }
+
+.registry-form {
+  width: 360px; }
+
+.registry-input {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px; }
+
+.registry-gender {
+  margin-top: 31px;
+  margin-bottom: 33px; }
+
+.gender-text {
+  display: flex;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  gap: 10px; }
+
+.registry-description {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222; }
+
+.registry-text {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  width: 100%;
+  padding: 13px 0 13px 17px;
+  border: 1px solid #B1B1B1; }
+
+.hint {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+  margin-top: 15px;
+  margin-bottom: 39px; }
+
+.registry-btn {
+  width: 167px;
+  padding: 16px 29px;
+  background-color: #F16D7F;
+  color: #FBFBFB;
+  display: flex;
+  justify-content: space-between;
+  border: none; }
+
+/* loyalty program */
+.loyalty {
+  width: 652px; }
+
+.loyalty-text, .loyalty-description, .loyalty-item {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000; }
+
+.loyalty-text {
+  margin-bottom: 22px; }
+
+.loyalty-description {
+  margin-bottom: 21px; }
+
+.loyalty-item {
+  margin-bottom: 16px; }
+  .loyalty-item:before {
+    content: '✓';
+    margin-right: 22px; }
+
+.loyalty-list {
+  list-style: none; }
 
 /*# sourceMappingURL=style.css.map */

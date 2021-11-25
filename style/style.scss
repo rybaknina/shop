@@ -58,125 +58,19 @@ $item-width: 360px;
 @import "blocks/_footer.scss";
 
 /* catalog page inner-title */
-.inner-title {
-  padding-top: 65px;
-  padding-bottom: 65px;
-  background-color: #F8F3F4;
-}
+@import "blocks/_inner-title.scss";
 
-.inner-title-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.page-title {
-  font-weight: normal;
-  @include font-style(24px, 29px);
-  color: $main-color;
-}
-
-.breadcrumbs-list {
-  display: flex;
-  list-style: none;
-  gap: 10px;
-}
-
-.breadcrumbs-item {
-  &::before {
-    content: '/';
-    margin-right: 5px;
-  }
-
-  &:first-child::before {
-    display: none;
-  }
-}
-
-.breadcrumbs-link {
-  text-decoration: none;
-  font-weight: 300;
-  @include font-style();
-  color: #636363;
-
-  &[href]:hover {
-    text-decoration: underline;
-    color: $main-color;
-  }
-}
-
-.breadcrumbs-link--current {
-  font-weight: bold;
-  color: $main-color;
-}
+/* breadcrumbs */
+@import "blocks/_breadcrumbs.scss";
 
 /* catalog page product filter */
-.filter-box {
-  display: flex;
-  gap: 30px;
-  padding-top: 51px;
-  padding-bottom: 64px;
-}
-
-.filter {
-  width: $item-width;
-}
-
-.filter-title {
-  font-weight: 600;
-  @include font-style();
-  color: #000000;
-  padding-left: 16px;
-}
-
-.sort {
-  display: flex;
-  gap: 28px;
-}
-
-.sort-name {
-  @include font-style();
-  color: #6F6E6E;
-}
-
-.sort-name-icon {
-  margin-left: 11px;
-}
+@import "blocks/_filter.scss";
 
 /* catalog page pagination */
-.pagination {
-  display: flex;
-  justify-content: center;
-}
+@import "blocks/_pagination.scss";
 
-.pagination-list {
-  margin: 0;
-  list-style: none;
-  border: 1px solid #EBEBEB;
-  padding: 15px;
-  width: 284px;
-  display: flex;
-  justify-content: space-between;
-}
+/* registry */
+@import "blocks/_registry.scss";
 
-.pagination-item {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.pagination-btn {
-  background-color: #fff;
-  border: none;
-  font-weight: 300;
-  @include font-style(16px, 19px);
-  color: #C4C4C4;
-}
-
-.pagination-btn--prev, .pagination-btn--next {
-  color: #000000;
-}
-
-.pagination-btn--current {
-  color: $main-color;
-}
-
+/* loyalty program */
+@import "blocks/_loyalty.scss";

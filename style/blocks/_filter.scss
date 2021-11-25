@@ -1,0 +1,31 @@
+.filter-box {
+  display: flex;
+  gap: 30px;
+  padding-top: 51px;
+  padding-bottom: 64px;
+}
+
+.filter {
+  width: $item-width;
+}
+
+.filter-title {
+  font-weight: 600;
+  @include font-style();
+  color: #000000;
+  padding-left: 16px;
+}
+
+.sort {
+  display: flex;
+  gap: 28px;
+}
+
+.sort-name {
+  @include font-style();
+  color: #6F6E6E;
+}
+
+.sort-name-icon {
+  margin-left: 11px;
+}

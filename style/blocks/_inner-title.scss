@@ -1,0 +1,17 @@
+.inner-title {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-color: #F8F3F4;
+}
+
+.inner-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-weight: normal;
+  @include font-style(24px, 29px);
+  color: $main-color;
+}
