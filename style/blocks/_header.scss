@@ -1,0 +1,45 @@
+.header {
+  background-color: #222222;
+  color: $contrast-color;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.header-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-right {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo-link {
+  margin-right: 41px;
+  text-decoration: none;
+}
+
+.search-link {
+  text-decoration: none;
+}
+
+.cart-link {
+  text-decoration: none;
+  margin-left: 33px;
+}
+
+.registry-link {
+  text-decoration: none;
+  margin-left: 33px;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+}
