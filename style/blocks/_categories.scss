@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
+  @include btn-smoothness(#B9B9B9, #2A2A2A, none, 1.05);
 }
 
 .category-women {

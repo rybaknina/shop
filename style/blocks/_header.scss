@@ -23,23 +23,34 @@
 .logo-link {
   margin-right: 41px;
   text-decoration: none;
+  &:hover {
+    transition-duration: 0.5s;
+    transform: rotate(360deg) scale(1.2);
+    color: inherit;
+    background: inherit;
+  }
 }
 
 .search-link {
   text-decoration: none;
+  @include change-color-hover();
 }
 
 .cart-link {
   text-decoration: none;
   margin-left: 33px;
+  @include change-color-hover();
 }
 
 .registry-link {
   text-decoration: none;
   margin-left: 33px;
+  @include change-color-hover();
 }
 
-.menu-button {
+.menu-btn {
   background-color: transparent;
   border: none;
+  fill: #E8E8E8;
+  @include button-rotate-hover();
 }

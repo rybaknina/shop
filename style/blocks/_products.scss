@@ -27,9 +27,14 @@
   margin-bottom: 48px;
 }
 
-.product {
+.product-item {
   background: #F8F8F8;
   width: $item-width;
+  position: relative;
+  transition: 1s;
+  &:hover .product-overlay {
+    opacity: 1;
+  }
 }
 
 .product-text {
@@ -47,6 +52,7 @@
   border: 1px solid #F26376;
   text-decoration: none;
   display: inline-block;
+  @include btn-smoothness();
 }
 
 .product-name, .product-name a {
@@ -55,6 +61,7 @@
   color: #000000;
   margin-bottom: 12px;
   text-decoration: none;
+  @include btn-smoothness(inherit, $main-color, none, 1);
 }
 
 .product-txt {
@@ -67,4 +74,29 @@
 .product-price {
   @include font-style(16px, 19px);
   color: $main-color;
+}
+
+.product-overlay {
+  background-color: rgba(58, 56, 56, 0.86);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.product-btn-add {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 14px 16px 12px 14px;
+  @include font-style();
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
