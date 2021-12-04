@@ -20,7 +20,6 @@
   font-weight: 300;
   @include font-style();
   color: #636363;
-
   &[href]:hover {
     text-decoration: underline;
     color: $main-color;
@@ -30,4 +29,5 @@
 .breadcrumbs-link--current {
   font-weight: bold;
   color: $main-color;
+  @include btn-smoothness(inherit, #4169e1, none, 1);
 }
