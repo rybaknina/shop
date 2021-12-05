@@ -7,13 +7,70 @@
 
 .filter {
   width: $item-width;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  border: none;
+
+  &-content {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px;
+    background-color: #ffffff;
+  }
+
+  &[open] {
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  }
 }
 
-.filter-title {
+.filter-name {
   font-weight: 600;
   @include font-style();
   color: #000000;
   padding-left: 16px;
+
+  &--icon {
+    margin-left: 11px;
+  }
+
+  &:hover {
+    color: $main-color;
+    fill: $main-color;
+  }
+}
+
+.filter-title-name {
+  display: block;
+  padding: 11px;
+  outline: none;
+  color: $main-color;
+  border-left: 5px solid $main-color;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 24px 16px;
+}
+
+.filter-item {
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter-link {
+  text-decoration: none;
+  @include font-style();
+  color: #6F6E6E;
+
+  &:hover {
+    color: $main-color;
+    text-decoration: underline;
+  }
 }
 
 .sort {
@@ -24,8 +81,51 @@
 .sort-name {
   @include font-style();
   color: #6F6E6E;
+  margin-bottom: 5px;
+
+  &--icon {
+    margin-left: 11px;
+  }
+
+  &:hover {
+    color: $main-color;
+  }
 }
 
-.sort-name-icon {
-  margin-left: 11px;
+.sort-wrap {
+  margin-left: -10px;
+  text-align: left;
+}
+
+.sort-list {
+  list-style: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #ffffff;
+  width: 79px;
+  padding: 7px 9px 11px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.sort-input {
+  margin-right: 9px;
+}
+
+.sort-item {
+  @include font-style(14px, 16px);
+  color: #6F6E6E;
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sort-list-trend {
+  width: 161px;
+}
+
+.sort-list-price {
+  width: 100px;
+
 }

@@ -23,6 +23,7 @@
 .logo-link {
   margin-right: 41px;
   text-decoration: none;
+
   &:hover {
     transition-duration: 0.5s;
     transform: rotate(360deg) scale(1.2);
@@ -53,4 +54,15 @@
   border: none;
   fill: #E8E8E8;
   @include button-rotate-hover();
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .registry-link {
+    display: none;
+  }
+
+  .cart-link {
+    display: none;
+  }
 }

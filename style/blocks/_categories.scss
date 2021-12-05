@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   text-decoration: none;
-  @include btn-smoothness(#B9B9B9, #2A2A2A, none, 1.05);
+  @include btn-smoothness(inherit, #2A2A2A, none, 1.05);
 }
 
 .category-women {
@@ -50,3 +50,39 @@
   text-align: center;
   color: $main-color;
 }
+
+/* tablet */
+@media (max-width: 1200px) {
+  .categories {
+    padding-top: 20px;
+    padding-bottom: 160px;
+  }
+  .category-item {
+    width: 232px;
+    height: 167px;
+  }
+  .category-accessories {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .categories {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .category-item {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .category-accessories {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+
