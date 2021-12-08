@@ -18,7 +18,6 @@
 
 .loyalty-item {
   margin-bottom: 16px;
-
   &:before {
     content: '✓';
     margin-right: 22px;
@@ -27,38 +26,4 @@
 
 .loyalty-list {
   list-style: none;
-}
-
-/* tablet */
-@media (max-width: 1200px) {
-  .loyalty {
-    width: 354px;
-  }
-
-  .loyalty-text, .loyalty-description, .loyalty-item {
-    @include font-style(16px, 19px);
-  }
-
-  .loyalty-text {
-    margin-bottom: 32px;
-  }
-
-  .loyalty-description {
-    margin-bottom: 22px;
-  }
-}
-
-/* mobile */
-@media (max-width: 767px) {
-  .registry{
-    padding-top: 40px;
-  }
-
-  .registry-wrap {
-    flex-direction: column;
-  }
-
-  .registry-form {
-    padding-bottom: 40px;
-  }
 }
