@@ -1,14 +1,15 @@
 .about {
-  padding-bottom: 127px;
+  padding-bottom: 116px;
 }
 
 .about-wrap {
   border: 1px solid #EAEAEA;
+  height: 600px;
   background-color: #FFFFFF;
   margin-top: -$shift;
   text-align: center;
   padding-top: 52px;
-  padding-bottom: 87px;
+  padding-bottom: 76px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,40 +91,6 @@
 
     &:hover {
       transition: 0.3s;
-    }
-  }
-}
-
-/* tablet */
-@media (max-width: 1200px) {
-  .about {
-    padding-top: 65px;
-    padding-bottom: 65px;
-  }
-
-  .about-wrap {
-    margin: 0 auto;
-    border: none;
-    padding-bottom: 0;
-    padding-top: 0;
-  }
-}
-
-/*mobile*/
-@media (max-width: 767px) {
-  .about-description {
-    width: 100%;
-  }
-
-  .about-price {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 37px;
-    &:after {
-      width: 50%;
-      margin-top: 50px;
     }
   }
 }
