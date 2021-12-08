@@ -32,6 +32,7 @@
   width: $item-width;
   position: relative;
   transition: 1s;
+
   &:hover .product-overlay {
     opacity: 1;
   }
@@ -99,4 +100,45 @@
   display: flex;
   align-items: center;
   gap: 11px;
+}
+
+
+/* tablet */
+@media (max-width: 1200px) {
+  .products {
+    padding-bottom: 64px;
+  }
+
+  .product-list {
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .products-title {
+    margin-bottom: 3px;
+  }
+
+  .product-description {
+    margin-bottom: 72px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .product-description {
+    margin-bottom: 65px;
+  }
+
+  .product-video, .product-img {
+    width: 100%;
+  }
+
+  .product-list {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .products {
+    padding-bottom: 96px;
+  }
 }

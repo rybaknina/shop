@@ -40,7 +40,7 @@ $shift: 65px;
 
   &:hover {
     transform: scale($scale);
-    background: $bgc-flow;
+    background-color: $bgc-flow;
     color: $color;
     box-shadow: $shadow;
   }
@@ -177,3 +177,22 @@ a {
 
 /* cart */
 @import "blocks/_cart.scss";
+
+/* menu */
+@import "blocks/_menu.scss";
+
+/* tablet */
+@media (max-width: 1200px) {
+  .container {
+    max-width: calc(768px - 16px * 2);
+    outline: $test-border-view;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .container {
+    max-width: calc(375px - 16px * 2);
+    outline: $test-border-view;
+  }
+}

@@ -34,3 +34,39 @@
   border-left: 12px solid $main-color;
   padding-left: 16px;
 }
+
+/* tablet */
+@media (max-width: 1200px) {
+  .promo-wrap {
+    height: 368px;
+    background-size: contain;
+    -ms-background-position-x: 0;
+    background-position-x: 0;
+  }
+
+  .promo-title {
+    @include font-style(44px, 53px);
+    margin-right: 33px;
+  }
+
+  .promo-title--small {
+    @include font-style(24px, 29px);
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .promo-wrap {
+    background-image: none;
+    height: 363px;
+  }
+
+  .promo-title {
+    @include font-style(38px, 46px);
+    margin-right: 33px;
+  }
+
+  .promo-title--small {
+    @include font-style(20px, 24px);
+  }
+}

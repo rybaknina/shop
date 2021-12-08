@@ -31,3 +31,27 @@
 .feedback-right {
   padding-right: 97px;
 }
+
+/* tablet */
+@media (max-width: 1200px) {
+  .feedback {
+    padding-top: 64px;
+    padding-bottom: 140px;
+  }
+
+  .feedback-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback-right {
+    padding-right: 0;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .feedback {
+    padding-bottom: 110px;
+  }
+}

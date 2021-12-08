@@ -44,3 +44,18 @@
   border-top-right-radius: 25px;
   border: 1px solid $main-color;
 }
+
+
+/* tablet */
+@media (max-width: 1200px) {
+  .subscribe-title {
+    padding-top: 48px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .input-email {
+    width: 100%;
+  }
+}

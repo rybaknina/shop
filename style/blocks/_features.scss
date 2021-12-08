@@ -47,3 +47,28 @@
   @include font-style();
   color: $contrast-color;
 }
+
+/* tablet */
+@media (max-width: 1200px) {
+  .features {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .feature-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .features {
+    padding-bottom: 81px;
+  }
+
+  .feature-list {
+    gap: 46px;
+  }
+}
