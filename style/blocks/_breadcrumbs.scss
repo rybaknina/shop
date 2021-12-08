@@ -20,6 +20,7 @@
   font-weight: 300;
   @include font-style();
   color: #636363;
+
   &[href]:hover {
     text-decoration: underline;
     color: $main-color;
