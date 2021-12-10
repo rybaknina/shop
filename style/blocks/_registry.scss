@@ -61,9 +61,10 @@
   background-color: $main-color;
   color: $contrast-color;
   display: flex;
+  align-items: center;
   border: none;
   gap: 20px;
-  &:after {
-    content: "\1F862";
+  &--icon {
+    fill: $contrast-color;
   }
 }
