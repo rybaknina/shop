@@ -21,7 +21,16 @@
       &:hover {
         fill: $main-color;
       }
-
     }
+  }
+  &-img {
+    width: 100%;
+  }
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .slider {
+    padding-bottom: 0;
   }
 }
