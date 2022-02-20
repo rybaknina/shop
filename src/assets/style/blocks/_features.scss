@@ -1,0 +1,74 @@
+.features {
+  background-color: #222222;
+  color: $contrast-color;
+  padding-top: 72px;
+  padding-bottom: 104px;
+}
+
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 30px;
+}
+
+.feature-item {
+  width: $item-width;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.feature-delivery {
+  background-image: url('../img/delivery.png');
+}
+
+.feature-discounts {
+  background-image: url('../img/discounts.png');
+}
+
+.feature-assurance {
+  background-image: url('../img/assurance.png');
+}
+
+.feature-name {
+  @include font-style(20px, 24px);
+  color: $contrast-color;
+  padding-top: 19px;
+  padding-bottom: 16px;
+}
+
+.feature-description {
+  font-weight: 300;
+  @include font-style();
+  color: $contrast-color;
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .features {
+    padding-top: 48px;
+    padding-bottom: 64px;
+  }
+
+  .feature-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .features {
+    padding-bottom: 81px;
+  }
+
+  .feature-list {
+    gap: 46px;
+  }
+}

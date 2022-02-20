@@ -1,0 +1,36 @@
+.slider {
+  background-color: #F7F7F7;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: $shift;
+
+  &-btn {
+    background: rgba(42, 42, 42, 0.15);
+    color: #2A2A2A;
+    width: 47px;
+    height: 47px;
+    border: none;
+    @include btn-smoothness(rgba(42, 42, 42, 0.15), inherit, none, 1);
+
+    &--icon {
+      fill: #000000;
+
+      &:hover {
+        fill: $main-color;
+      }
+    }
+  }
+  &-img {
+    width: 100%;
+  }
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .slider {
+    padding-bottom: 0;
+  }
+}

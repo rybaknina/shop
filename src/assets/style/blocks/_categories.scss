@@ -1,0 +1,88 @@
+.categories {
+  padding-top: 65px;
+  padding-bottom: 96px;
+}
+
+.categories-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.category-item {
+  width: $item-width;
+  height: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-decoration: none;
+  @include btn-smoothness(inherit, #2A2A2A, none, 1.05);
+}
+
+.category-women {
+  background-image: url('../img/gradient.png'), url('../img/for-women.jpg');
+}
+
+.category-men {
+  background-image: url('../img/gradient.png'), url('../img/for-men.jpg');
+}
+
+.category-kids {
+  background-image: url('../img/gradient.png'), url('../img/for-kids.jpg');
+}
+
+.category-accessories {
+  margin-top: 30px;
+  width: 100%;
+  height: 180px;
+  background-image: url('../img/gradient.png'), url('../img/accessories.jpg');
+}
+
+.category-text-top {
+  @include font-style(16px, 19px);
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.category-text-bottom {
+  @include font-style(24px, 29px);
+  text-align: center;
+  color: $main-color;
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .categories {
+    padding-top: 20px;
+    padding-bottom: 160px;
+  }
+  .category-item {
+    width: 232px;
+    height: 167px;
+  }
+  .category-accessories {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .categories {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .category-item {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .category-accessories {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+

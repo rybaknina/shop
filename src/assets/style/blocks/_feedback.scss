@@ -1,0 +1,57 @@
+.feedback {
+  background-color: $bg-color;
+  background-image: url('../img/subscribe-bg.jpg');
+  background-size: cover;
+  background-position-y: bottom;
+  padding-top: 97px;
+  padding-bottom: 154px;
+}
+
+.feedback-wrap {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.feedback-left {
+  width: $item-width;
+}
+
+.feedback-message {
+  @include font-style(20px, 24px);
+  color: #222224;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.feedback-emphasize {
+  font-style: italic;
+}
+
+.feedback-right {
+  padding-right: 97px;
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .feedback {
+    padding-top: 64px;
+    padding-bottom: 140px;
+  }
+
+  .feedback-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feedback-right {
+    padding-right: 0;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .feedback {
+    padding-bottom: 110px;
+  }
+}

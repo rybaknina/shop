@@ -1,0 +1,198 @@
+$desktop-width: 1140px;
+$main-color: #F16D7F;
+$test-border-view: none;
+$contrast-color: #FBFBFB;
+$bg-color: #E1E1E1;
+$item-width: 360px;
+$shift: 65px;
+
+@mixin font-style($size:14px, $height:17px) {
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin change-color-hover($color:#E8E8E8, $hover-color:$main-color) {
+  &-icon {
+    transition-property: fill;
+    transition-duration: 0.5s;
+    fill: $color;
+
+    &:hover {
+      fill: $hover-color;
+    }
+  }
+}
+
+@mixin button-rotate-hover($fill:$main-color, $deg:360deg) {
+  cursor: pointer;
+  &:hover {
+    transition: fill 1s, transform 0.5s;
+    transform: rotate($deg) scale(1.2);
+    background-color: transparent;
+    fill: $fill;
+    box-shadow: none;
+  }
+}
+
+@mixin btn-smoothness($bgc-flow:$main-color, $color:#ffffff, $shadow: 1px 1px 2px, $scale:1.2) {
+  cursor: pointer;
+  transition-duration: 0.5s;
+
+  &:hover {
+    transform: scale($scale);
+    background-color: $bgc-flow;
+    color: $color;
+    box-shadow: $shadow;
+  }
+}
+
+@keyframes heartbeat {
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  10% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  17% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  33% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  45% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+.heartbeat {
+  -webkit-animation: heartbeat 3s ease-in-out infinite both;
+  animation: heartbeat 3s ease-in-out infinite both;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.container {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  outline: $test-border-view;
+}
+
+.hidden {
+  position: absolute;
+  left: -99999px;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* button */
+button {
+  cursor: pointer;
+  @include btn-smoothness();
+}
+
+/* a */
+a {
+  @include btn-smoothness(transparent, #ffffff, none);
+}
+
+.subscribe-btn, .registry-btn {
+  transition-delay: 0.2s;
+  @include btn-smoothness(#B9B9B9, #FFFFFF, none, 1.1);
+}
+
+/* header */
+@import "blocks/_header.scss";
+
+/* promo */
+@import "blocks/_promo.scss";
+
+/* categories */
+@import "blocks/_categories.scss";
+
+/* products */
+@import "blocks/_products.scss";
+
+/* features */
+@import "blocks/_features.scss";
+
+/* feedback */
+@import "blocks/_feedback.scss";
+
+/* subscribe */
+@import "blocks/_subscribe.scss";
+
+/* footer */
+@import "blocks/_footer.scss";
+
+/* catalog page inner-title */
+@import "blocks/inner_title";
+
+/* breadcrumbs */
+@import "blocks/_breadcrumbs.scss";
+
+/* catalog page product filter */
+@import "blocks/_filter.scss";
+
+/* catalog page pagination */
+@import "blocks/_pagination.scss";
+
+/* registry */
+@import "blocks/_registry.scss";
+
+/* loyalty program */
+@import "blocks/_loyalty.scss";
+
+/* slider */
+@import "blocks/_slider.scss";
+
+/* about */
+@import "blocks/_about.scss";
+
+/* cart */
+@import "blocks/_cart.scss";
+
+/* menu */
+@import "blocks/_menu.scss";
+
+/* tablet */
+@media (max-width: 1200px) {
+  .container {
+    max-width: calc(768px - 16px * 2);
+    outline: $test-border-view;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .container {
+    max-width: calc(375px - 16px * 2);
+    outline: $test-border-view;
+  }
+}

@@ -1,0 +1,129 @@
+.about {
+  padding-bottom: 127px;
+}
+
+.about-wrap {
+  border: 1px solid #EAEAEA;
+  background-color: #FFFFFF;
+  margin-top: -$shift;
+  text-align: center;
+  padding-top: 52px;
+  padding-bottom: 87px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-filter {
+  margin-bottom: 48px;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  @include font-style();
+  color: $main-color;
+  margin-bottom: 12px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #EF5B70;
+    margin-top: 12px;
+  }
+}
+
+.about-name {
+  font-style: normal;
+  font-weight: 300;
+  @include font-style(18px, 22px);
+  color: #4D4D4D;
+  margin-bottom: 48px;
+}
+
+.about-description {
+  font-weight: 300;
+  @include font-style();
+  text-align: center;
+  color: #5E5E5E;
+  margin-bottom: 32px;
+  width: 555px;
+}
+
+.about-price {
+  font-weight: 300;
+  @include font-style(24px, 29px);
+  color: #EF5B70;
+  margin-bottom: 64px;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 642px;
+    height: 1px;
+    background-color: #EAEAEA;
+    margin-top: 64px;
+  }
+}
+
+.btn-add {
+  width: 212px;
+  font-weight: normal;
+  @include font-style(16px, 19px);
+  color: #F26376;
+  padding-top: 15px;
+  padding-bottom: 14px;
+  border: 1px solid #FF6A6A;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+
+  &--icon {
+    fill: #EF5B70;
+
+    &:hover {
+      transition: 0.3s;
+    }
+  }
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .about {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+
+  .about-wrap {
+    margin: 0 auto;
+    border: none;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .about-description {
+    width: 100%;
+  }
+
+  .about-price {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 37px;
+    &:after {
+      width: 50%;
+      margin-top: 50px;
+    }
+  }
+}
