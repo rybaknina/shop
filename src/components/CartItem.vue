@@ -22,9 +22,9 @@
 <script>
 export default {
   name: "CartItem",
-  props: [
-    "data"
-  ],
+  props: {
+    data: Object
+  },
   methods: {
     onRemoveBtnClk(id) {
       this.$store.dispatch("removeFromCart", id);

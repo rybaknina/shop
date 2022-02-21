@@ -33,11 +33,11 @@
           <section class="checkout">
             <h3 class="hidden">Checkout</h3>
             <p class="sub-name">
-              SUB TOTAL<span class="sub-sum">${{totalSum}}</span>
+              SUB TOTAL<span class="sub-sum">${{ totalSum }}</span>
             </p>
             <div class="total-item">
               <p class="total-name">
-                GRAND TOTAL<span class="total-sum">${{totalSum}}</span>
+                GRAND TOTAL<span class="total-sum">${{ totalSum }}</span>
               </p>
             </div>
             <button class="checkout-btn heartbeat" type="button">PROCEED TO CHECKOUT</button>

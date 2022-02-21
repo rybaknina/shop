@@ -104,10 +104,3 @@ export default {
   name: "BaseLayout"
 };
 </script>
-
-<style scoped>
-/*@import "./assets/style/blocks/_header.scss";*/
-/*@import "./assets/style/blocks/_feedback.scss";*/
-/*@import "./assets/style/blocks/_footer.scss";*/
-/*@import "./assets/style/blocks/_menu.scss";*/
-</style>

@@ -18,7 +18,13 @@ export default createStore({
       state.cart = cart;
     },
     addToCart: (state, product) => {
-      state.cart.push(product);
+      const index = state.cart.findIndex(item => item.id === +product.id);
+      if (index >= 0) {
+        state.cart[index].quantity++;
+      } else {
+        product.quantity = 1;
+        state.cart.push(product);
+      }
     },
     removeFromCart: (state, id) => {
       const idx = state.cart.findIndex((item) => item.id === id);
