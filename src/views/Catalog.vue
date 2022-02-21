@@ -184,6 +184,7 @@
 </template>
 
 <script>
+import "../assets/style/blocks/_pagination.scss";
 import Card from "@/components/Card";
 
 export default {
@@ -198,7 +199,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-
-</style>

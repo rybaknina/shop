@@ -6,22 +6,11 @@ const app = express();
 const port = 3000;
 
 const catalogPath = path.resolve(__dirname, "./data/catalog.json");
-const coverPath = path.resolve(__dirname, "./data/cover.json");
 const cartPath = path.resolve(__dirname, "./data/cart.json");
 const staticDir = path.resolve(__dirname, "../dist/");
 
 app.use(express.static(staticDir));
 app.use(express.json());
-
-app.get("/api/v1/cover", (req, res) => {
-  fs.readFile(coverPath, "utf-8", (err, data) => {
-    if (!err) {
-      res.send(data);
-    } else {
-      res.status(500).send(err);
-    }
-  });
-});
 
 app.get("/api/v1/catalog", (req, res) => {
   fs.readFile(catalogPath, "utf-8", (err, data) => {

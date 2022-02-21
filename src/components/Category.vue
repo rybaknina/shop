@@ -25,11 +25,9 @@
 </template>
 
 <script>
+import "../assets/style/blocks/_categories.scss";
+
 export default {
   name: "Category"
 };
 </script>
-
-<style scoped>
-
-</style>

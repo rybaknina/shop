@@ -13,7 +13,7 @@
         <div class="cart-left">
           <ul class="cart-list">
             <cart-item v-for="item of cart" v-bind:key="item.id" v-bind:data="item">
-              </cart-item>
+            </cart-item>
           </ul>
           <div class="cart-btn-wrap">
             <button class="cart-btn--clear" type="button">CLEAR SHOPPING CART</button>
@@ -33,11 +33,11 @@
           <section class="checkout">
             <h3 class="hidden">Checkout</h3>
             <p class="sub-name">
-              SUB TOTAL<span class="sub-sum">$900</span>
+              SUB TOTAL<span class="sub-sum">${{totalSum}}</span>
             </p>
             <div class="total-item">
               <p class="total-name">
-                GRAND TOTAL<span class="total-sum">$900</span>
+                GRAND TOTAL<span class="total-sum">${{totalSum}}</span>
               </p>
             </div>
             <button class="checkout-btn heartbeat" type="button">PROCEED TO CHECKOUT</button>
@@ -49,6 +49,7 @@
 </template>
 
 <script>
+import "../assets/style/blocks/_cart.scss";
 import CartItem from "@/components/CartItem";
 
 export default {
@@ -57,6 +58,10 @@ export default {
   computed: {
     cart() {
       return this.$store.getters.getCart;
+    },
+    totalSum() {
+      const cartList = this.$store.getters.getCart;
+      return cartList.reduce((total, item) => +total + +item.price * +item.quantity, 0);
     }
   }
 };

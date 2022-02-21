@@ -4,13 +4,11 @@ import layout from "./layout";
 export default createStore({
   state: {
     catalog: [],
-    cart: [],
-    cover: []
+    cart: []
   },
   getters: {
     getCatalog: (state) => [...state.catalog],
-    getCart: (state) => [...state.cart],
-    getCover: (state) => [...state.cover]
+    getCart: (state) => [...state.cart]
   },
   mutations: {
     setCatalog: (state, catalog) => {
@@ -18,9 +16,6 @@ export default createStore({
     },
     setCart: (state, cart) => {
       state.cart = cart;
-    },
-    setCover: (state, cover) => {
-      state.cover = cover;
     },
     addToCart: (state, product) => {
       state.cart.push(product);
@@ -43,13 +38,6 @@ export default createStore({
         .then((response) => response.json())
         .then((data) => {
           commit("setCart", data);
-        });
-    },
-    loadCover({ commit }) {
-      return fetch("/api/v1/cover")
-        .then((response) => response.json())
-        .then((data) => {
-          commit("setCover", data);
         });
     },
     addToCart({ commit }, product) {

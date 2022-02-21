@@ -9,7 +9,7 @@
     <img v-bind:src="imageSource" alt="product" class="product-img">
     <div class="product-text">
       <h3 class="product-name">
-        <router-link to="/product">{{ data.title }}</router-link>
+        <router-link to="/product">{{ data.title.toUpperCase() }}</router-link>
       </h3>
       <p class="product-txt">{{ data.description }}</p>
       <p class="product-price">${{ data.price }}</p>
@@ -18,9 +18,9 @@
 </template>
 <script>
 export default {
-  props: [
-    "data"
-  ],
+  props: {
+    data: Object
+  },
   methods: {
     onBuyBtnClk(product) {
       this.$store.dispatch("addToCart", product);

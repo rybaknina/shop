@@ -8,7 +8,7 @@
   },
   {
     "id": 2,
-    "img": "catalog-product-2.jpg",
+    "img": "product-2.jpg",
     "title": "Hat red",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": 116
@@ -29,14 +29,14 @@
   },
   {
     "id": 5,
-    "img": "catalog-product-5.jpg",
+    "img": "product-5.jpg",
     "title": "Shirt black",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": 262
   },
   {
     "id": 6,
-    "img": "catalog-product-6.jpg",
+    "img": "product-6.jpg",
     "title": "Hat green",
     "description": "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
     "price": 482

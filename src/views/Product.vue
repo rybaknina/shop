@@ -112,7 +112,7 @@
       <h2 class="hidden">Products</h2>
       <div class="products-wrap">
         <ul class="product-list product-list-reverse">
-          <card v-for="item in cover.slice(0, 3)" v-bind:key="item.id" v-bind:data="item"></card>
+          <card v-for="item in catalog.slice(0, 3)" v-bind:key="item.id" v-bind:data="item"></card>
         </ul>
       </div>
     </div>
@@ -120,6 +120,13 @@
 </template>
 
 <script>
+import "../assets/style/blocks/_inner_title.scss";
+import "../assets/style/blocks/_breadcrumbs.scss";
+import "../assets/style/blocks/_filter.scss";
+import "../assets/style/blocks/_products.scss";
+import "../assets/style/blocks/_slider.scss";
+import "../assets/style/blocks/_about.scss";
+
 import Card from "@/components/Card";
 export default {
   name: "Product",
@@ -127,13 +134,9 @@ export default {
     Card
   },
   computed: {
-    cover() {
-      return this.$store.getters.getCover;
+    catalog() {
+      return this.$store.getters.getCatalog;
     }
   }
 };
 </script>
-
-<style scoped>
-
-</style>

@@ -16,11 +16,6 @@ export default {
   mounted() {
     this.$store.dispatch("loadCatalog");
     this.$store.dispatch("loadCart");
-    this.$store.dispatch("loadCover");
   }
 };
 </script>
-
-<style lang="scss">
-@import "./assets/style/style.scss";
-</style>

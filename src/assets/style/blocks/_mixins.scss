@@ -1,0 +1,39 @@
+@mixin font-style($size:14px, $height:17px) {
+  font-size: $size;
+  line-height: $height;
+}
+
+@mixin change-color-hover($color:#E8E8E8, $hover-color:$main-color) {
+  &-icon {
+    transition-property: fill;
+    transition-duration: 0.5s;
+    fill: $color;
+
+    &:hover {
+      fill: $hover-color;
+    }
+  }
+}
+
+@mixin button-rotate-hover($fill:$main-color, $deg:360deg) {
+  cursor: pointer;
+  &:hover {
+    transition: fill 1s, transform 0.5s;
+    transform: rotate($deg) scale(1.2);
+    background-color: transparent;
+    fill: $fill;
+    box-shadow: none;
+  }
+}
+
+@mixin btn-smoothness($bgc-flow:$main-color, $color:#ffffff, $shadow: 1px 1px 2px, $scale:1.2) {
+  cursor: pointer;
+  transition-duration: 0.5s;
+
+  &:hover {
+    transform: scale($scale);
+    background-color: $bgc-flow;
+    color: $color;
+    box-shadow: $shadow;
+  }
+}
