@@ -38,8 +38,8 @@ app.post("/api/v1/cart", (req, res) => {
       const cart = JSON.parse(data);
       const index = cart.findIndex(p => p.id === +req.body.id);
       if (index < 0) {
-        req.body.quantity = 1;
-        cart.push(req.body);
+        const product = req.body;
+        cart.push(Object.assign({ quantity: 1 }, product));
       } else {
         cart[index].quantity++;
       }

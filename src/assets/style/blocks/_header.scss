@@ -41,6 +41,25 @@
   text-decoration: none;
   margin-left: 33px;
   @include change-color-hover();
+
+  &-counter {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    fill: $main-color;
+  }
+}
+
+.cart-count {
+  position: absolute;
+  @include font-style(12px, 14px);
+  color: #FFFFFF;
+  top: -2px;
+  right: -5px;
+}
+
+.cart-wrapper {
+  position: relative;
 }
 
 .registry-link {

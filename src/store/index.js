@@ -8,7 +8,8 @@ export default createStore({
   },
   getters: {
     getCatalog: (state) => [...state.catalog],
-    getCart: (state) => [...state.cart]
+    getCart: (state) => [...state.cart],
+    getCartCount: (state) => state.cart.reduce((acc, item) => acc + item.quantity, 0)
   },
   mutations: {
     setCatalog: (state, catalog) => {

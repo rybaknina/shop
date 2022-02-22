@@ -111,6 +111,22 @@ a {
     fill: #E8E8E8; }
     .cart-link-icon:hover {
       fill: #F16D7F; }
+  .cart-link-counter {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    fill: #F16D7F; }
+
+.cart-count {
+  position: absolute;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  top: -2px;
+  right: -5px; }
+
+.cart-wrapper {
+  position: relative; }
 
 .registry-link {
   text-decoration: none;
