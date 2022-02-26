@@ -1,11 +1,5 @@
 <template>
-  <section class="inner-title inner-title-along">
-    <div class="container">
-      <div class="inner-title-wrap">
-        <h1 class="page-title">REGISTRATION</h1>
-      </div>
-    </div>
-  </section>
+  <inner-title-along title="REGISTRATION"/>
   <section class="registry">
     <div class="container">
       <h2 class="hidden">Registration</h2>
@@ -38,19 +32,7 @@
             </svg>
           </button>
         </form>
-        <div class="loyalty">
-          <h3 class="loyalty-text">LOYALTY HAS ITS PERKS</h3>
-          <p class="loyalty-description">Get in on the loyalty program where you can earn points and unlock serious
-                                         perks. Starting with
-                                         these as soon as you join:</p>
-          <ul class="loyalty-list">
-            <li class="loyalty-item">15% off welcome offer</li>
-            <li class="loyalty-item">Free shipping, returns and exchanges on all orders</li>
-            <li class="loyalty-item">$10 off a purchase on your birthday</li>
-            <li class="loyalty-item">Early access to products</li>
-            <li class="loyalty-item">Exclusive offers & rewards</li>
-          </ul>
-        </div>
+        <loyalty/>
       </div>
     </div>
   </section>
@@ -59,8 +41,11 @@
 <script>
 import "../assets/style/blocks/_registry.scss";
 import "../assets/style/blocks/_loyalty.scss";
+import Loyalty from "@/components/Loyalty";
+import InnerTitleAlong from "@/components/InnerTitleAlong";
 
 export default {
-  name: "Registry"
+  name: "Registry",
+  components: { InnerTitleAlong, Loyalty }
 };
 </script>

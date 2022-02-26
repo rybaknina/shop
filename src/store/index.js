@@ -30,6 +30,10 @@ export default createStore({
     removeFromCart: (state, id) => {
       const idx = state.cart.findIndex((item) => item.id === id);
       state.cart.splice(idx, 1);
+    },
+    setQuantity: (state, { id, quantity }) => {
+      const product = state.cart.find(item => item.id === +id);
+      product.quantity = quantity;
     }
   },
   actions: {
@@ -64,6 +68,16 @@ export default createStore({
       })
         .then(() => {
           commit("removeFromCart", id);
+        });
+    },
+    setQuantity({ commit }, { id, quantity }) {
+      return fetch(`/api/v1/cart/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ quantity: quantity })
+      })
+        .then(() => {
+          commit("setQuantity", { id, quantity });
         });
     }
   },
