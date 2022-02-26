@@ -1,0 +1,175 @@
+.filter-box {
+  display: flex;
+  gap: 30px;
+  padding-top: 51px;
+  padding-bottom: 64px;
+}
+
+.filter {
+  width: $item-width;
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  border: none;
+
+  &-content {
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    top: 40px;
+  }
+}
+
+.filter-name {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  @include font-style();
+  color: #000000;
+  padding-left: 16px;
+
+  &--icon {
+    margin-left: 11px;
+  }
+
+  &:hover {
+    color: $main-color;
+    fill: $main-color;
+  }
+}
+
+.filter-title-name {
+  display: block;
+  padding: 11px;
+  outline: none;
+  color: $main-color;
+  border-left: 5px solid $main-color;
+  border-bottom: 1px solid #EBEBEB;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 24px 16px;
+}
+
+.filter-item {
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.filter-link {
+  text-decoration: none;
+  @include font-style();
+  color: #6F6E6E;
+
+  &:hover {
+    color: $main-color;
+    text-decoration: underline;
+  }
+}
+
+.sort {
+  display: flex;
+  gap: 28px;
+}
+
+.sort-name {
+  @include font-style();
+  color: #6F6E6E;
+  margin-bottom: 5px;
+
+  &--icon {
+    margin-left: 11px;
+  }
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.sort-wrap {
+  margin-left: -10px;
+  text-align: left;
+}
+
+.sort-list {
+  list-style: none;
+  position: absolute;
+  z-index: 1000;
+  background-color: #ffffff;
+  width: 79px;
+  padding: 7px 9px 11px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+
+.sort-input {
+  margin-right: 9px;
+}
+
+.sort-item {
+  @include font-style(14px, 16px);
+  color: #6F6E6E;
+  margin-bottom: 6px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sort-list-trend {
+  width: 161px;
+}
+
+.sort-list-price {
+  width: 100px;
+
+}
+
+/* tablet */
+@media (max-width: 1200px) {
+  .filter-box {
+    justify-content: space-between;
+  }
+
+  .filter-name {
+    padding-left: 0;
+  }
+}
+
+/*mobile*/
+@media (max-width: 767px) {
+  .filter-header {
+    display: none;
+  }
+
+  .filter-name--icon {
+    margin-left: 0;
+    width: 37px;
+    height: 25px;
+  }
+
+  .filter {
+    width: 37px;
+  }
+
+  .filter-box {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+  .sort-name {
+    @include font-style(12px, 14px);
+  }
+  .sort, .filter-box {
+    gap: 23px;
+  }
+
+  .filter-content, .sort-list {
+    width: max-content;
+  }
+}

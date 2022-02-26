@@ -1,0 +1,38 @@
+.inner-title {
+  padding-top: 65px;
+  padding-bottom: 65px;
+  background-color: #F8F3F4;
+}
+
+.inner-title-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-title {
+  font-weight: normal;
+  @include font-style(24px, 29px);
+  color: $main-color;
+}
+
+/* tablet */
+@media (max-width: 767px) {
+  .inner-title-wrap {
+    flex-direction: column;
+  }
+
+  .inner-title {
+    padding-top: 24px;
+    padding-bottom: 46px;
+  }
+
+  .page-title {
+    margin-bottom: 32px;
+  }
+
+  .inner-title-along {
+    padding-top: 50px;
+    padding-bottom: 38px;
+  }
+}

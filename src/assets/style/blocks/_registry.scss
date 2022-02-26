@@ -1,0 +1,70 @@
+.registry {
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+
+.registry-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.registry-form {
+  width: $item-width;
+}
+
+.registry-input {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 20px;
+}
+
+.registry-gender {
+  margin-top: 31px;
+  margin-bottom: 33px;
+}
+
+.gender-text {
+  display: flex;
+  font-weight: 300;
+  @include font-style(11px, 13px);
+  color: #000000;
+  gap: 10px;
+}
+
+.registry-description {
+  font-weight: 300;
+  @include font-style(16px, 19px);
+  color: #222222;
+}
+
+.registry-text {
+  font-weight: 300;
+  @include font-style(13px, 16px);
+  color: #B1B1B1;
+  width: 100%;
+  padding: 13px 0 13px 17px;
+  border: 1px solid #B1B1B1;
+}
+
+.hint {
+  font-weight: 300;
+  @include font-style(13px, 16px);
+  color: #B1B1B1;
+  margin-top: 15px;
+  margin-bottom: 39px;
+}
+
+.registry-btn {
+  padding: 16px 29px;
+  background-color: $main-color;
+  color: $contrast-color;
+  display: flex;
+  align-items: center;
+  border: none;
+  gap: 20px;
+  &--icon {
+    fill: $contrast-color;
+  }
+}
