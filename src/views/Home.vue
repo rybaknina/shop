@@ -1,15 +1,5 @@
 <template>
-  <section class="promo">
-    <div class="container">
-      <div class="promo-wrap">
-        <div class="promo-brand">
-          <h1 class="promo-title">THE BRAND <br>
-            <span class="promo-title--small">OF LUXERIOUS <span
-              class="promo-title--pink">FASHION</span></span></h1>
-        </div>
-      </div>
-    </div>
-  </section>
+  <promo/>
   <category/>
   <section class="products">
     <div class="container">
@@ -39,9 +29,11 @@ import "../assets/style/blocks/_promo.scss";
 import "../assets/style/blocks/_products.scss";
 import Card from "@/components/Card";
 import Category from "@/components/Category";
+import Promo from "@/components/Promo";
 
 export default {
   components: {
+    Promo,
     Category,
     Card
   },
@@ -52,8 +44,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-@import "../assets/style/blocks/_promo.scss";
-@import "../assets/style/blocks/_products.scss";
-</style>

@@ -1,24 +1,5 @@
 <template>
-  <section class="inner-title">
-    <div class="container">
-      <div class="inner-title-wrap">
-        <h1 class="page-title">NEW ARRIVALS</h1>
-        <nav class="breadcrumbs">
-          <ul class="breadcrumbs-list">
-            <li class="breadcrumbs-item">
-              <router-link to="/" class="breadcrumbs-link">HOME</router-link>
-            </li>
-            <li class="breadcrumbs-item">
-              <a href="#" class="breadcrumbs-link">MEN</a>
-            </li>
-            <li class="breadcrumbs-item">
-              <a class="breadcrumbs-link breadcrumbs-link--current">NEW ARRIVALS</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </section>
+  <inner-title/>
   <section class="products">
     <div class="container">
       <h2 class="hidden">Products</h2>
@@ -186,10 +167,12 @@
 <script>
 import "../assets/style/blocks/_pagination.scss";
 import Card from "@/components/Card";
+import InnerTitle from "@/components/InnerTitle";
 
 export default {
   name: "Catalog",
   components: {
+    InnerTitle,
     Card
   },
   computed: {

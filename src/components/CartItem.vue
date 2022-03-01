@@ -3,11 +3,11 @@
     <img v-bind:src="imageSource" alt="product" class="cart-img">
     <div class="cart-info">
       <h3 class="cart-item-name">{{ data.title }}</h3>
-      <p class="cart-item-text">Price: <span class="cart-item-price">${{data.price}}</span></p>
+      <p class="cart-item-text">Price: <span class="cart-item-price">${{data.price * data.quantity}}</span></p>
       <p class="cart-item-text">Color: Red</p>
       <p class="cart-item-text">Size: Xl</p>
       <p class="cart-item-text">Quantity:
-        <input type="number" min="1" max="10" class="item-count" name="data.quantity" :value="data.quantity">
+        <input type="number" min="1" max="10" class="item-count" name="data.quantity" v-model="quantity">
       </p>
     </div>
     <button class="card-close-btn" v-on:click="onRemoveBtnClk(data.id)">
@@ -33,6 +33,14 @@ export default {
   computed: {
     imageSource() {
       return require(`../assets/img/${this.data.img}`);
+    },
+    quantity: {
+      get() {
+        return this.data.quantity;
+      },
+      set(value) {
+        this.$store.dispatch("setQuantity", { id: this.data.id, quantity: value });
+      }
     }
   }
 };

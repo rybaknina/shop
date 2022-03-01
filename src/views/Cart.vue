@@ -1,11 +1,5 @@
 <template>
-  <section class="inner-title inner-title-along">
-    <div class="container">
-      <div class="inner-title-wrap">
-        <h1 class="page-title">SHOPPING CART</h1>
-      </div>
-    </div>
-  </section>
+  <inner-title-along title="SHOPPING CART"/>
   <section class="cart">
     <div class="container">
       <h2 class="hidden">Cart goods</h2>
@@ -51,10 +45,11 @@
 <script>
 import "../assets/style/blocks/_cart.scss";
 import CartItem from "@/components/CartItem";
+import InnerTitleAlong from "@/components/InnerTitleAlong";
 
 export default {
   name: "Cart",
-  components: { CartItem },
+  components: { InnerTitleAlong, CartItem },
   computed: {
     cart() {
       return this.$store.getters.getCart;
